@@ -151,9 +151,8 @@ class Disc:
                 pass
             msg = f"invalid type for {key}={value}; {type(value)}"
             assert isinstance(value, Number), msg
-            print('Setting '+key+' to '+str(value))
             initial_conditions[key] = value
-        self._default_initial_conditions = initial_conditions
+        self.default_initial_conditions = initial_conditions
         return
 
     def set_physical_attributes(self, **kwargs) -> None:
